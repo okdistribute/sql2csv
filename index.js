@@ -1,7 +1,6 @@
 var argv = require('minimist')(process.argv.slice(2));
 var spawn = require('child_process').spawn;
 var debug = require('debug')('sql2csv')
-var parseUrl = require('parse-db-url')
 require('String.prototype.endswith')
 
 module.exports = sql2csv
