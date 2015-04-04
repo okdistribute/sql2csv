@@ -26,7 +26,8 @@
   "homepage": "https://github.com/karissa/sql2csv",
   "dependencies": {
     "minimist": "^1.1.1",
-    "parse-db-url": "0.0.0"
+    "parse-db-url": "0.0.0",
+    "string.prototype.endswith": "^0.2.0"
   },
   "devDependencies": {
     "debug": "^2.1.3"
