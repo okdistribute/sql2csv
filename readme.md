@@ -8,7 +8,6 @@ $ npm install -g sql2csv
 # Usage
 ```
 $ sql2csv <datbase url/location> -c <query> --db <postgres,mysql,sqlite>
-*results on stdout..*
 ```
 
 To a file:
