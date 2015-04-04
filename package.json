@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/karissa/sql2csv",
   "dependencies": {
+    "debug": "^2.1.3",
     "minimist": "^1.1.1",
     "string.prototype.endswith": "^0.2.0"
   },
