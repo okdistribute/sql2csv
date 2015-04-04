@@ -3,10 +3,12 @@
   "version": "1.1.0",
   "description": "SQL to CSV",
   "main": "index.js",
+  "bin": {
+    "sql2csv": "cli.js"
+  },
   "scripts": {
     "test": "npm test"
   },
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/karissa/sql2csv.git"

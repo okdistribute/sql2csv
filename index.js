@@ -1,10 +1,6 @@
-var argv = require('minimist')(process.argv.slice(2));
 var spawn = require('child_process').spawn;
 var debug = require('debug')('sql2csv')
 require('String.prototype.endswith')
-
-module.exports = sql2csv
-
 
 var sql2csv = {
   postgres: function (db, query) {
@@ -38,14 +34,4 @@ function streamExecute(command, args) {
   ]});
 }
 
-/** MAIN **/
-var USAGE = 'sql2csv <datbase url/location> -c <query> --db <postgres,mysql,sqlite>'
-if (argv._.length != 1) return console.error(USAGE)
-if (!argv.db) return console.error(USAGE)
-
-var url = argv._[0]
-
-debug('using ', argv.db)
-var f = sql2csv[argv.db]
-if (f) return f(url, argv.c)
-else return console.error('Connection string unrecognized. Did you type it right? \n  ' + URL)
+module.exports = sql2csv
