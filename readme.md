@@ -11,9 +11,6 @@ $ npm install -g sql2csv
 $ sql2csv <datbase url/location> -c <query> --db <postgres,mysql,sqlite>
 ```
 
-# JavaScript
-*TODO: make more JS friendly*
-
 To a file:
 ```
 $ sql2csv test.db -c "SELECT id,name from users" --db sqlite > users.csv
@@ -25,6 +22,9 @@ ID,name
 4,dave
 5,ryan
 ```
+
+# JavaScript
+*TODO: make more JS friendly*
 
 
 ## postgres
