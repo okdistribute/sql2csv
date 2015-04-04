@@ -8,17 +8,21 @@ $ npm install -g sql2csv
 # Usage
 ```bash
 $ sql2csv <datbase url/location> -c <query> --db <postgres,mysql,sqlite>
+*results on stdout..*
 ```
-## sqlite
 
+To a file:
 ```bash
-$ sql2csv test.db -c "SELECT * from users;" --db sqlite
-
+$ sql2csv test.db -c "SELECT id,name from users" --db sqlite **> users.csv**
+$ ls
+users.csv
+$ cat users.csv
 ID,name
 3,karissa
 4,dave
 5,ryan
 ```
+
 
 ## postgres
 
@@ -40,3 +44,13 @@ id,amount,kind
 
 *coming soon*
 
+## sqlite
+
+```bash
+$ sql2csv test.db -c "SELECT * from users;" --db sqlite
+
+ID,name
+3,karissa
+4,dave
+5,ryan
+```
