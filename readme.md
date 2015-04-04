@@ -1,4 +1,5 @@
-#sql2csv
+# sql2csv
+
 [![NPM](https://nodei.co/npm/sql2csv.png)](https://nodei.co/npm/sql2csv/)
 
 ```
