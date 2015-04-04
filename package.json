@@ -6,6 +6,9 @@
   "scripts": {
     "test": "npm test"
   },
+  "bin": {
+    "psql2csv": "index.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/karissa/psql2csv.git"
@@ -20,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/karissa/psql2csv/issues"
   },
-  "homepage": "https://github.com/karissa/psql2csv"
+  "homepage": "https://github.com/karissa/psql2csv",
+  "dependencies": {
+    "minimist": "^1.1.1",
+    "parse-db-url": "0.0.0"
+  },
+  "devDependencies": {
+    "debug": "^2.1.3"
+  }
 }
