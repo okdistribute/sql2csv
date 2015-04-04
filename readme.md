@@ -6,16 +6,18 @@
 $ npm install -g sql2csv
 ```
 
-# Usage
+## Usage
 ```
-$ sql2csv <datbase url/location> -c <query> --db <postgres,mysql,sqlite>
+$ sql2csv --db <postgres,mysql,sqlite> <datbase url/location> -c <query>
 ```
 
-To a file:
+### Example with data to a file
 ```
-$ sql2csv test.db -c "SELECT id,name from users" --db sqlite > users.csv
+$ sql2csv --db sqlite test.db -c "SELECT * from users"  > users.csv
+
 $ ls
 users.csv
+
 $ cat users.csv
 ID,name
 3,karissa
@@ -23,14 +25,12 @@ ID,name
 5,ryan
 ```
 
-# JavaScript
-*TODO: make more JS friendly*
+## Examples
 
-
-## postgres
+### postgres
 
 ```
-$ sql2csv -c "SELECT id,amount,debt_type from users"  "postgres://localhost/debtis"  --db postgres
+$ sql2csv --db postgres "postgres://localhost/debtis" -c "SELECT id,amount,debt_type from users"
 id,amount,kind
 1,80000,student
 2,80000,student
@@ -42,16 +42,20 @@ id,amount,kind
 8,300000,auto
 ```
 
-## mysql
-
-*coming soon*
 
 ## sqlite
 
 ```
-$ sql2csv test.db -c "SELECT * from users;" --db sqlite
+$ sql2csv --db sqlite test.db -c "SELECT * from users;"
 ID,name
 3,karissa
 4,dave
 5,ryan
 ```
+
+### mysql
+
+*TODO*
+
+### JavaScript
+*TODO*
