@@ -13,7 +13,7 @@ $ sql2csv <datbase url/location> -c <query> --db <postgres,mysql,sqlite>
 
 To a file:
 ```bash
-$ sql2csv test.db -c "SELECT id,name from users" --db sqlite **> users.csv**
+$ sql2csv test.db -c "SELECT id,name from users" --db sqlite > users.csv
 $ ls
 users.csv
 $ cat users.csv
