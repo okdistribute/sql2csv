@@ -1,5 +1,5 @@
 {
-  "name": "psql2csv",
+  "name": "sql2csv",
   "version": "1.0.0",
   "description": "postgres to CSV",
   "main": "index.js",
@@ -7,11 +7,11 @@
     "test": "npm test"
   },
   "bin": {
-    "psql2csv": "index.js"
+    "sql2csv": "index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/karissa/psql2csv.git"
+    "url": "https://github.com/karissa/sql2csv.git"
   },
   "keywords": [
     "postgres",
@@ -21,9 +21,9 @@
   "author": "Karissa McKelvey <karissa@karissamck.com> (http://karissamck.com/)",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/karissa/psql2csv/issues"
+    "url": "https://github.com/karissa/sql2csv/issues"
   },
-  "homepage": "https://github.com/karissa/psql2csv",
+  "homepage": "https://github.com/karissa/sql2csv",
   "dependencies": {
     "minimist": "^1.1.1",
     "parse-db-url": "0.0.0"
