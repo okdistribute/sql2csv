@@ -4,6 +4,10 @@
 
 ![dat](http://img.shields.io/badge/Development%20sponsored%20by-dat-green.svg?style=flat)
 
+We want to be able to get data in csv format using a particular sql command. However, it'd be slow to load it into a program and format it into csv just to write it out again. Thankfully, each sql flavored database has its own way to format its results in csv form for fast access, but they're all slightly different. It'd be nice if we didn't have to remember all of those particularities.
+
+Thus, sql2csv takes your SELECT statement and translates it into CSV output on process.stdout for the particular database you want. Its fast, and streaming, because we don't do any transformation -- the data comes directly from the database to be piped to wherever you want.
+
 ```
 $ npm install -g sql2csv
 ```
