@@ -11,5 +11,5 @@ var url = argv._[0]
 
 debug('using ', argv.db)
 var f = sql2csv[argv.db]
-if (f) return f(url, argv.c)
+if (f) return f(url, argv.c, process.stdout, process.stderr)
 else return console.error('Connection string unrecognized. Did you type it right? \n  ' + URL)
