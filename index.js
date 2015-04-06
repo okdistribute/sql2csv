@@ -3,6 +3,15 @@ var debug = require('debug')('sql2csv')
 require('String.prototype.endswith')
 
 var sql2csv = {
+  guess: function (db) {
+    if (db.indexOf('postgres://') == 0) {
+      return 'postgres'
+    }
+    if (db.indexOf('mysql://') == 0) {
+      return 'mysql'
+    }
+    else return 'sqlite'
+  },
   postgres: function (db, query, stdout, stderr) {
     if (query.endsWith(';')) {
       query = query.substring(0, query.length -1)

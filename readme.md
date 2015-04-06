@@ -13,13 +13,14 @@ $ npm install -g sql2csv
 ```
 
 ## Usage
+sql2csv will try to guess the kind of database based on the url if you don't specify the paramter `--db <type>`
 ```
-$ sql2csv --db <postgres,mysql,sqlite> <datbase url/location> -c <query>
+$ sql2csv <datbase url/location> -c <query> --db <postgres,mysql,sqlite>
 ```
 
 ### Example with data to a file
 ```
-$ sql2csv --db sqlite test.db -c "SELECT * from users"  > users.csv
+$ sql2csv test.db -c "SELECT * from users"  > users.csv
 
 $ ls
 users.csv
@@ -36,7 +37,7 @@ ID,name
 ### postgres
 
 ```
-$ sql2csv --db postgres "postgres://localhost/debtis" -c "SELECT id,amount,debt_type from users"
+$ sql2csv postgres://localhost/debtis -c "SELECT id,amount,debt_type from users"
 id,amount,kind
 1,80000,student
 2,80000,student
@@ -52,7 +53,7 @@ id,amount,kind
 ## sqlite
 
 ```
-$ sql2csv --db sqlite test.db -c "SELECT * from users;"
+$ sql2csv test.db -c "SELECT * from users;"
 ID,name
 3,karissa
 4,dave
