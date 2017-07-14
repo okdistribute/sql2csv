@@ -1,6 +1,6 @@
 var spawn = require('child_process').spawn;
 var debug = require('debug')('sql2csv')
-require('String.prototype.endswith')
+require('string.prototype.endswith')
 
 var sql2csv = {
   guess: function (db) {
